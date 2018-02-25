@@ -1,0 +1,27 @@
+---
+title: "My Fancy Presentation"
+date: "February 23, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## My New Slide With Code That Runs
+
+```{r, comment="", echo=TRUE}
+head(mtcars)
+```
+
+## My New Slide With a plot
+
+```{r, echo=FALSE, fig.align='center', fig.cap="My Awesome Plot"}
+plot(mtcars$wt,mtcars$mpg, xlab="Weight", ylab="MPG")
+```
+
+
+
+
+
