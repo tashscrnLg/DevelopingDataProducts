@@ -1,0 +1,36 @@
+---
+title: "Map of Greater Fort Lauderdale"
+date: "February 23, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(leaflet)
+
+```
+
+## Fort Lauderdale and Surrounding Areas
+
+```{r, comment="", echo=FALSE}
+
+FTL_Sites <- c(
+      "<a href='http://www.fortlauderdale.gov/'>City of Fort Lauderdale</a>",
+      "<a href='https://www.davie-fl.gov/'>City of Davie FL</a>",
+      "<a href='https://www.hollywoodfl.org/'>City of Hollywood FL</a>",
+      "<a href='http://www.plantation.org/'>City of Plantation FL</a>",
+      "<a href='http://www.nova.edu/'>Nova Southeastern University</a>",
+      "<a href='https://www.fau.edu/broward/'>Florida Atlantic University - Broward Campus</a>",
+      "Fort Lauderdale-Hollywood International Airport")
+
+FTL_LatLng <- data.frame(lat = c(26.122438,26.076477,26.011280,26.1272222,26.078607,26.083006,26.073411),
+                         lng =c(-80.137314,-80.252113,-80.142967,-80.2333333,-80.243539,-80.235892,-80.153400))
+
+FTL_pop <-  c(178152,90000,140000, 91457, 25000,5000, 21000)
+FTL_LatLng %>% 
+      leaflet() %>%
+      addTiles() %>%
+      addMarkers(popup = FTL_Sites) %>%
+      addCircles(weight=1, radius=sqrt(FTL_pop*30))
+
+```
