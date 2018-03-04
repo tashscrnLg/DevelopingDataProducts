@@ -1,0 +1,25 @@
+---
+title: "DDP Week-3 Assignment: Plotly"
+date: "March 4, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+data(mtcars)
+head(mtcars)
+```
+
+## 3D Scatter Plot of MTCARS using Plotly
+
+```{r, comment="", echo=FALSE}
+
+plot_ly(mtcars, x=mtcars$mpg, y= mtcars$wt, z=mtcars$disp, type ="scatter3d",
+        mode = "markers", color = mtcars$mpg) %>% 
+      layout(title = "3D Scatter Plot of MPG, Weight, and Displacement",
+             scene = list(xaxis = list(title = "MPG"),
+                          yaxis = list(title = "Weight"),
+                          zaxis = list(title = "Disp")))
+        
+```
