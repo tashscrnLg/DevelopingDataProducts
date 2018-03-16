@@ -1,8 +1,4 @@
-
-library(ggplot2)
-library(randomForest) 
-library(quantmod);library(tseries);
-library(timeSeries);library(forecast) 
+library(quantmod)
 
 shinyServer(function(input, output) {
 
