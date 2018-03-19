@@ -1,0 +1,76 @@
+---
+title: "Developing Data Products: Week 4 Course Project"
+date: "March 14, 2018"
+output: ioslides_presentation
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(quantmod)
+```
+
+
+## Technical Analysis Of Stocks
+
+### Overview 
+Technical analysis uses statistical techniques to analyze a stock's historic price movements in order to determine the probability of the future price of the stock.
+
+Statistical analysis of stock prices has resulted in numerous technical indicators that are used extensively by traders to perform technical analysis. 
+
+Click link below my example on Technical Analysis. 
+https://tashscrnlg.shinyapps.io/stkApp/
+
+Click link below my presentation on Technical Analysis.
+
+
+## Technical Indicators
+
+### Popular Technical Indicators
+
+Simple Moving Average (SMA): Track the average of a stock price over a pre-defined period. Popular periods are 200, 100, 50, 20, 10, and 5 days. 
+Investopedia for more info: https://www.investopedia.com/terms/s/sma.asp
+
+Relative Strength Indicator (RSI): 
+
+The RSI is one of the most widely-known technical indicators with many traders using it both 
+to identify overbought and oversold conditions as well as to measure the strength of a trend. 
+Investopedia for more info: (https://www.investopedia.com/terms/r/rsi.asp)
+
+Bollinger Bands:
+Tracks the price movement of a stock's price in a band that is two standard deviation from 
+the stock's 21 days moving average. 
+Investopedia for more info: https://www.investopedia.com/terms/b/bollingerbands.asp
+
+## Getting Stock Data in R
+
+To obtain stock data for analysis in R requires the quantmod package that is avaiable on CRAN.
+This package have many function and features and includes:
+
+Downloading of  hisoric stock prices from YAHOO or GOOGLE;
+Charting of stock data;
+Adding technical indicators to charts
+
+For more information on quantmod vist the site https://www.quantmod.com/
+
+
+## How to Retrieve Stock Data
+
+
+### Use the getSymbols function to retrieve data from yahoo or google. 
+
+```{r, comment="", echo=TRUE}
+      data <- getSymbols("MSFT", src = "yahoo", 
+                               from = Sys.Date()-90,
+                               to = Sys.Date(),
+                               auto.assign = FALSE, warnings=FALSE)
+```
+
+## Example Stock Data - Microsoft (MSFT)
+
+ 
+
+```{r, comment="", echo=TRUE}
+      tail(data)
+```
+
