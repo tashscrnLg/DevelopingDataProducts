@@ -21,8 +21,6 @@ Statistical analysis of stock prices has resulted in numerous technical indicato
 Click link below my example on Technical Analysis. 
 https://tashscrnlg.shinyapps.io/stkApp/
 
-Click link below my presentation on Technical Analysis.
-
 
 ## Technical Indicators
 
