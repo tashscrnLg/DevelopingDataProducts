@@ -20,7 +20,8 @@ shinyUI(fluidPage(
                   
                   p(strong("Technical Indicators")),
                   helpText("Technical Indicators are used as guides in trading stocks"),
-                  checkboxInput("sma", label = "Simple Moving Average", value = FALSE),
+                  checkboxInput("sma", label = "Simple Moving Average", 
+                                value = FALSE),
                   checkboxInput("ema", label = "Exponential Moving Average", 
                                 value = FALSE),
                   checkboxInput("rsi", label = "Relative Strength Indicator", 
@@ -35,7 +36,7 @@ shinyUI(fluidPage(
                   ),
                 
             mainPanel(tabsetPanel(type = "tabs", 
-                                  tabPanel("Plot Stock Prices", plotOutput("plot1")),  
-                                  tabPanel("Stock Returns", plotOutput("plot2"))
+                                  tabPanel("Plot Stock Prices", plotOutput("plot1"))
+                                 
             ))
       )))

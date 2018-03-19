@@ -1,0 +1,4 @@
+Suppose a trader follows these simple trade criteria:
+Buy 50 shares of a stock when its 50-day moving average goes above the 200-day moving average
+Sell shares of the stock when its 50-day moving average goes below the 200-day moving average
+https://www.investopedia.com/articles/active-trading/101014/basics-algorithmic-trading-concepts-and-examples.asp
